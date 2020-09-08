@@ -1,14 +1,20 @@
 <form class="ui large form segment">
-  <h3 class="ui header"> Ajouter un lien</h3>
+  <h3 class="ui header">Ajouter un lien</h3>
   <div class="field">
     <label for="title">Titre</label>
-    <input type="text" name="title" id="title" #newtitle>
+    <input type="text" name="title" id="title" #newtitle />
   </div>
   <div class="field">
     <label for="link">Lien:</label>
-    <input type="text" name="link" id="link" #newlink>
+    <input type="text" name="link" id="link" #newlink />
   </div>
-  <button (click)="addArticle(newtitle, newlink)" class="ui positive right float button">
+  <button
+    (click)="addArticle(newtitle, newlink)"
+    class="ui positive right float button"
+  >
     Envoyer
   </button>
 </form>
+<div class="ui grid posts">
+  <app-article></app-article>
+</div>
